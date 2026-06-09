@@ -1,0 +1,102 @@
+body {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  background: #f4f4f4;
+}
+
+.main {
+  width: max-content;
+  margin: 20px auto;
+}
+
+.movie-card {
+  display: flex;
+  background: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+.left {
+  flex: 1;
+}
+
+.left img {
+  width: 200px;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.right {
+  flex: 2;
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #222;
+}
+
+.plot {
+  margin-top: 10px;
+  color: #666;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.price {
+  margin-top: 15px;
+  font-size: 22px;
+  font-weight: 600;
+  color: #27ae60;
+}
+
+.footer {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.rating {
+  font-size: 18px;
+  font-weight: 600;
+  color: #f39c12;
+}
+
+.stars {
+  font-size: 18px;
+  color: #f1c40f;
+}
+
+.favourite-btn,
+.cart-btn {
+  border: none;
+  padding: 10px 18px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.favourite-btn {
+  background: #e74c3c;
+  color: white;
+}
+
+.favourite-btn:hover {
+  background: #c0392b;
+}
+
+.cart-btn {
+  background: #3498db;
+  color: white;
+}
+
+.cart-btn:hover {
+  background: #2980b9;
+}
