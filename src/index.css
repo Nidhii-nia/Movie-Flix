@@ -68,9 +68,20 @@ body {
   color: #f39c12;
 }
 
-.stars {
-  font-size: 18px;
-  color: #f1c40f;
+.stars{
+  display: flex;
+}
+
+.starCount{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stars img {
+  margin: 0.4rem;
+  width: 16px;
+  height: 16px;
 }
 
 .favourite-btn,
