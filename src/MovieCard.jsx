@@ -1,41 +1,9 @@
 import React from "react";
 
 class MovieCard extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      title: "The Avengers",
-      plot: "SuperNatural Powers shown in movie.",
-      price: "Rs. 199",
-      rating: 8.9,
-      stars: 0,
-    };
-  }
-
-  addStars = () => {
-    this.setState((prevState) => {
-      console.log(prevState);
-      if (prevState.stars < 5) {
-        return {
-          stars: prevState.stars + 0.5,
-        };
-      }
-    });
-  };
-
-  decreaseStars = () => {
-    this.setState((prevState) => {
-        console.log(prevState);
-      if (prevState.stars >= 0.5) {
-        return {
-          stars: prevState.stars - 0.5,
-        };
-      }
-    });
-  };
 
   render() {
-    const { title, plot, price, rating, stars } = this.state;
+    const { title, plot, price, rating, stars, favourite, cart } = this.props.movies;
     return (
       <div className="main">
         <div className="movie-card">
@@ -55,7 +23,7 @@ class MovieCard extends React.Component {
               <div className="stars">
                 <img
                   alt="minus"
-                  onClick={this.decreaseStars}
+                  onClick={()=>{this.props.decreaseStars(this.props.movies)}}
                   src="https://cdn-icons-png.flaticon.com/128/992/992683.png"
                 />
                 <img
@@ -64,13 +32,13 @@ class MovieCard extends React.Component {
                 />
                 <img
                   alt="plus"
-                  onClick={this.addStars}
+                  onClick={()=>{this.props.addStars(this.props.movies)}}
                   src="https://cdn-icons-png.flaticon.com/128/3303/3303893.png"
                 />
                 <span className="starCount">{stars}</span>
               </div>
-              <button className="favourite-btn">Favourite</button>
-              <button className="cart-btn">Add to Cart</button>
+              <button className={favourite?"unfavourite-btn":"favourite-btn"} onClick={()=>{this.props.toggleFav(this.props.movies)}}>{favourite?"Unfavourite":"Favourite"}</button>
+              <button className={cart?"removeCart-btn":"cart-btn"} onClick={()=>{this.props.toggleCart(this.props.movies)}}>{cart?"Remove from Cart":"Add to Cart"}</button>
             </div>
           </div>
         </div>

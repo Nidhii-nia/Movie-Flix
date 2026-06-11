@@ -6,13 +6,12 @@
 //     return <h1>Class Component</h1>
 //   }
 // }
-
-import MovieCard from "./MovieCard";
+import MovieList from "./MovieList";
 const App = () => {
   return (
     <>
     <h1>Movie App</h1>
-    <MovieCard/>
+    <MovieList/>
     </>
   )
 }
