@@ -1,9 +1,5 @@
-import React from "react";
-
-class MovieCard extends React.Component {
-
-  render() {
-    const { title, plot, price, rating, stars, favourite, cart } = this.props.movies;
+function MovieCard(props){
+    const { title, plot, price, rating, stars, favourite, cart } = props.movies;
     return (
       <div className="main">
         <div className="movie-card">
@@ -23,7 +19,7 @@ class MovieCard extends React.Component {
               <div className="stars">
                 <img
                   alt="minus"
-                  onClick={()=>{this.props.decreaseStars(this.props.movies)}}
+                  onClick={()=>{props.decreaseStars(props.movies)}}
                   src="https://cdn-icons-png.flaticon.com/128/992/992683.png"
                 />
                 <img
@@ -32,19 +28,18 @@ class MovieCard extends React.Component {
                 />
                 <img
                   alt="plus"
-                  onClick={()=>{this.props.addStars(this.props.movies)}}
+                  onClick={()=>{props.addStars(props.movies)}}
                   src="https://cdn-icons-png.flaticon.com/128/3303/3303893.png"
                 />
                 <span className="starCount">{stars}</span>
               </div>
-              <button className={favourite?"unfavourite-btn":"favourite-btn"} onClick={()=>{this.props.toggleFav(this.props.movies)}}>{favourite?"Unfavourite":"Favourite"}</button>
-              <button className={cart?"removeCart-btn":"cart-btn"} onClick={()=>{this.props.toggleCart(this.props.movies)}}>{cart?"Remove from Cart":"Add to Cart"}</button>
+              <button className={favourite?"unfavourite-btn":"favourite-btn"} onClick={()=>{props.toggleFav(props.movies)}}>{favourite?"Unfavourite":"Favourite"}</button>
+              <button className={cart?"removeCart-btn":"cart-btn"} onClick={()=>{props.toggleCart(props.movies)}}>{cart?"Remove from Cart":"Add to Cart"}</button>
             </div>
           </div>
         </div>
       </div>
     );
-  }
 }
 
 export default MovieCard;

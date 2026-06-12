@@ -2,6 +2,7 @@ body {
   margin: 0;
   font-family: "Montserrat", sans-serif;
   background: #f4f4f4;
+  overflow-x: hidden;
 }
 
 .main {
@@ -71,11 +72,11 @@ body {
   color: #f39c12;
 }
 
-.stars{
+.stars {
   display: flex;
 }
 
-.starCount{
+.starCount {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -89,8 +90,10 @@ body {
   height: 16px;
 }
 
-.favourite-btn,.unfavourite-btn,
-.cart-btn, .removeCart-btn {
+.favourite-btn,
+.unfavourite-btn,
+.cart-btn,
+.removeCart-btn {
   border: none;
   padding: 10px 18px;
   border-radius: 5px;
@@ -131,7 +134,37 @@ body {
   background: #2980b9;
 }
 
-.removeCart-btn{
+.removeCart-btn {
   background: #b99529;
   font-size: 0.75rem;
+}
+
+/* .navbar {
+  width: 98%;
+  height: 1.5rem;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  background-color: #002f4e;
+} */
+
+/* .navbar .title {
+  text-decoration: underline;
+  color: #ffffff;
+} */
+
+.cart-img {
+  width: 2rem;
+  padding-top: 0.3rem;
+}
+
+.cartCount {
+  text-align: center;
+  color: whitesmoke;
+  border-radius: 50%;
+  padding: 0 0.3rem;
+  background-color: #db3434;
+  float: right;
 }
